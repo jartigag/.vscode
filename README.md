@@ -1,7 +1,7 @@
 # Getting started
-In order to apply these Settings:
+In order to apply these settings:
 - For your project, go to the folder where you usually clone your git repositories (your Workspace) and copy `.vscode/` there.
-- For your user, go to `~/.config/Code/` and copy the content of `User/*` there.
+- For your user, go to `~/.config/Code/` (`%USERPROFILE%\AppData\Roaming\Code` in Windows) and copy the content of `User/*` there.
 
 ## Why bother
 ### About editor settings
@@ -26,7 +26,14 @@ This is intended to improve the readability of code and make it consistent.
 
 ## What's here
 ```sh
-$ tree .vscode/
-.vscode/
-.config/Code/User/
+$ tree -a -I .git/ -I README.md
+.
+├── sample_script.snippet.conf
+├── sample_script.snippet.py  
+├── User/
+│   └── snippets/
+│       ├── conf.json   # sample .conf file,    just for illustration
+│       └── python.json # sample .py file,      just for illustration
+└── .vscode/
+    └── .gitignore      # ref for python repos, adjust to suit yourself
 ```
